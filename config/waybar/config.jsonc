@@ -1,0 +1,86 @@
+{
+	"css": "/etc/nixos/config/waybar/style.css",
+	"layer": "top",
+	"position": "top",
+	"modules-left": ["memory", "temperature", "hyprland/language"],
+	"modules-center": ["clock"],
+	"modules-right": ["backlight", "pulseaudio", "battery"],
+
+	"hyprland/language": {
+		"format": "Lang: {}",
+		"format-en": "GOD SAVE THE QUEEN",
+		"format-sv": "DU GAMLA DU FRIA",
+		"format-no": "JA VI ELSKER DETTE LANDET",
+		"format-de": "FÜR DAS DEUTSCHE VATERLAND"
+	},
+
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "{percent}% {icon}",
+		"format-icons": ["", ""]
+	},
+
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-bluetooth": "{volume}% {icon}",
+		"format-muted": "",
+		"format-icons": {
+			"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+			"alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"phone-muted": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"scroll-step": 1,
+		"on-click": "pavucontrol",
+		"ignored-sinks": ["Easy Effects Sink"]
+	},
+
+	"memory": {
+		"interval": 30,
+		"format": "{used:0.1f}GB "
+	},
+
+    "clock": {
+		"interval": 1,
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%A, %d %B %Y (%R)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+			"mode"          : "year",
+			"mode-mon-col"  : 3,
+			"weeks-pos"     : "right",
+			"on-scroll"     : 1,
+			"format": {
+				"months":     "<span color='#ffead3'><b>{}</b></span>",
+				"days":       "<span color='#ecc6d9'><b>{}</b></span>",
+				"weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+				"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+				"today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+		    }
+		},
+        "actions":  {
+			"on-click-right": "mode",
+			"on-scroll-up": "tz_up",
+			"on-scroll-down": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+    },
+
+	"workspaces": {
+		"disable-scroll": true,
+		"icon-theme": "material"
+	},
+
+	"battery": {
+		"format": "{capacity}% {icon}",
+		"format-icons": ["", "", "", "", ""]
+	}
+}
+

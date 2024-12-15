@@ -1,0 +1,37 @@
+#waybar {
+	background-color: #1e1e2e;
+	color: #cdd6f4;
+	font-family: "Fira Code", monospace;
+	font-size: 15px;
+}
+
+#clock {
+	background-color: #1e1e2e;
+	padding: 0 5px;
+	margin: 0 5px;
+}
+
+#battery {
+	background-color: #1e1e2e;
+	padding: 5px 5px;
+	margin: 0 5px;
+}
+
+#memory {
+	background-color: #1e1e2e;
+	padding: 5px 5px;
+	margin: 0 5px;
+}
+
+#temperature {
+	background-color: #1e1e2e;
+	padding: 5px 5px;
+	margin: 0 5px;
+}
+
+#backlight {
+	background-color: #1e1e2e;
+	padding: 5px 5px;
+	margin: 0 5px;
+}
+
