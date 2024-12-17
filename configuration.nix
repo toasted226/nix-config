@@ -149,6 +149,7 @@
     firefox
     feh
     spotify
+	unzip
 
     # screenshotting
     grim

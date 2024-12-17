@@ -18,10 +18,6 @@
 			enable = true;
 			xwayland.enable = true;
 		};
-
-		environment.etc."xdg/hypr/hyprland.conf".source = builtins.toPath ./../config/hypr/hyprland.conf;
-
-		environment.variables.HYPRLAND_CONFIG = "/etc/xdg/hypr/hyprland.conf";
 	};
 }
 
