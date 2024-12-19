@@ -76,6 +76,8 @@
   };
 
   hardware = {
+  	bluetooth.enable = true;
+	bluetooth.powerOnBoot = true;
     opengl.enable = true;
     nvidia.modesetting.enable = true;
   };
@@ -85,6 +87,7 @@
   security.rtkit.enable = true;
 
   services = {
+  	blueman.enable = true;
     pipewire = {
       enable = true;
       audio.enable = true;
@@ -150,6 +153,7 @@
     feh
     spotify
 	unzip
+	bluez
 
     # screenshotting
     grim
